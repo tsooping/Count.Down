@@ -3,7 +3,7 @@ import { FaPlay, FaPause } from "react-icons/fa";
 import { LuTimerReset } from "react-icons/lu";
 
 const Timer: React.FC = () => {
-  const [time, setTime] = useState<number>(240); // Initial time in seconds (4 minutes)
+  const [time, setTime] = useState<number>(61); // Initial time in seconds (4 minutes)
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const formatTime = (seconds: number) => {
@@ -14,7 +14,7 @@ const Timer: React.FC = () => {
     // Change text color based on time
     const textColor = time <= 10 ? "red" : time < 60 ? "yellow" : "white";
     return (
-      <span style={{ color: textColor }}>
+      <span style={{ color: textColor}}>
         {minutes}:{remainingSeconds}
       </span>
     );
