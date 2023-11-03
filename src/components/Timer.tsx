@@ -52,7 +52,7 @@ const Timer: React.FC = () => {
     <>
 
         <div className="gradientBackground w-screen h-screen justify-center items-center flex">
-          <div className="text-[50vh] font-bold mt-[-100px] absolute mx-50">
+          <div className="text-[40vh] font-bold mt-[-100px] absolute mx-50">
             {formatTime(time)}
           </div>
         </div>
