@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradientBackground {
+  background-color: #000000;
+  opacity: 1;
+  background-image: radial-gradient(#191919 2.5px, #000000 1.85px);
+  background-size: 37px 37px;
+  animation: moveBackground 50s linear infinite; 
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%; 
+  }
+}
