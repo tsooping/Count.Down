@@ -5,6 +5,7 @@ import { LuTimerReset } from "react-icons/lu";
 const Timer: React.FC = () => {
   const [time, setTime] = useState<number>(240); // Initial time in seconds (4 minutes)
   const [isActive, setIsActive] = useState<boolean>(false);
+  const [timerType, setTimerType] = useState<string>("2 Mins");
 
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60)
@@ -45,12 +46,16 @@ const Timer: React.FC = () => {
 
   const resetTimer = () => {
     setIsActive(false);
-    setTime(240); // Reset to 4 minutes (240 seconds)
+    timerType === "2 Mins" ? setTime(240) : setTime(120);
   };
 
+  const toggleTimerType = () => {
+    timerType === "2 Mins" ? (setTimerType("4 Mins"), setTime(120)) : (setTimerType("2 Mins"), setTime(240));
+    setIsActive(false);
+  }
+ 
   return (
     <>
-
         <div className="gradientBackground w-screen h-screen justify-center items-center flex">
           <div className="text-[40vh] font-bold font-mono absolute mx-50">
             {formatTime(time)}
@@ -79,6 +84,13 @@ const Timer: React.FC = () => {
             disabled={isActive}
           >
             <LuTimerReset />
+          </button>
+          <button
+            className=" text-white px-4 py-2 rounded-md"
+            onClick={toggleTimerType}
+            disabled={isActive}
+          >
+            {timerType}
           </button>
         </div>
     </>
