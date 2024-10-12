@@ -3,4 +3,4 @@
 # Count.Down Bouldering Clock
 - [Link to Application!](https://countdown-tsooping.netlify.app/)
 
-I created this simple application for a local bouldering competition to be used as the countdown clock during the finals.
+I created this simple application for a local bouldering competition to be used as the countdown clock during the finals. The countdown can be toggled between 4 minutes (round time) and 2 minutes (route reading).
